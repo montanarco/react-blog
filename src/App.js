@@ -4,8 +4,9 @@ import './App.css';
 import NavBar from './NavBar';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import ArticlesList  from './pages/ArticlesList';
+import ArticlesListPage  from './pages/ArticlesListPage';
 import ArticlesPage from './pages/ArticlePage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/about" element={<AboutPage/>}/>
-            <Route path="/articles" element={<ArticlesList/>}/>
+            <Route path="/articles" element={<ArticlesListPage/>}/>
             <Route path="/articles/:articleId" element={<ArticlesPage/>}/>
+            <Route path='*' element={<NotFoundPage/>}/>
           </Routes>
       </div>
       </div>
